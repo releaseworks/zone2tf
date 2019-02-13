@@ -4,7 +4,8 @@ A script to convert a Bind-compatible DNS zone file to Terraform AWS Route53 con
 This script quick, dirty and will not handle all use cases. It's meant to be used as a starting point.
 
 ## Usage
-```$ git clone https://github.com/releaseworks/zone2tf.git
+```
+$ git clone https://github.com/releaseworks/zone2tf.git
 $ cd zone2tf/
 $ python zone2tf.py my_zone.txt
 
