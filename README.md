@@ -1,7 +1,7 @@
 # zone2tf
 A script to convert a Bind-compatible DNS zone file to Terraform AWS Route53 configuration.
 
-This script quick, dirty and will not handle all use cases. It's meant to be used as a starting point.
+This script is quick, dirty and will not handle all use cases. Use it as a starting point.
 
 ## Usage
 ```
