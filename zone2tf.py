@@ -1,5 +1,5 @@
 import sys
-import json
+
 
 def _gen_zone(**d):
     return '''
