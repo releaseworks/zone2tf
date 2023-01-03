@@ -18,7 +18,7 @@ resource "aws_route53_record" "{record_name}" {{
 }}'''.format(**d)
 
 if len(sys.argv) < 2:
-    print "Usage:\n{0} <zonefile>".format(sys.argv[0])
+    print("Usage:\n{0} <zonefile>".format(sys.argv[0]))
     exit(1)
 
 with open(sys.argv[1], 'r') as zone_file:
@@ -38,8 +38,8 @@ with open(sys.argv[1], 'r') as zone_file:
             root_zone = parts[0]
             root_zone_name = root_zone.replace('.','')
 
-            print _gen_zone(root_zone=root_zone,
-                            root_zone_name=root_zone_name)
+            print(_gen_zone(root_zone=root_zone,
+                            root_zone_name=root_zone_name))
             continue
         
         record_type = parts[3]
@@ -63,9 +63,9 @@ with open(sys.argv[1], 'r') as zone_file:
 
         record_ttl = int(parts[1])
 
-        print _gen_record(record_name='{0}-{1}'.format(parts[0].replace('.',''),parts[3].lower()),
+        print(_gen_record(record_name='{0}-{1}'.format(parts[0].replace('.',''),parts[3].lower()),
                           name=record_name,
                           ttl=record_ttl,
                           type=record_type,
                           record=record,
-                          root_zone_name=root_zone_name)
+                          root_zone_name=root_zone_name))
